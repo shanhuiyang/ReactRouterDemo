@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Text, Header, Title, Body, Content, Button, Left, Right, Icon, H2, Card, CardItem } from "native-base";
+import { Text, Header, Title, Body, Content, Button, Left, Right, Icon, H2, Card, CardItem, Thumbnail } from "native-base";
 import { RouteComponentProps, Redirect } from "react-router-native";
 import Topic from "./Topic.d";
 
@@ -27,7 +27,16 @@ export default class TopicDetail extends React.Component<IProps, IStates> {
                 <Content padder>
                     <Card>
                         <CardItem header>
-                            <Text>{topic.title}</Text>
+                            <H2>{topic.title}</H2>
+                        </CardItem>
+                        <CardItem>
+                            <Left>
+                                <Thumbnail small source={topic.speakerAvatar} />
+                                <Body>
+                                <Text>{topic.speaker}</Text>
+                                    <Text note>{topic.schedule.toLocaleDateString()}</Text>
+                                </Body>
+                            </Left>
                         </CardItem>
                         <CardItem>
                             <Body>

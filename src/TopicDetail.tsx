@@ -50,7 +50,7 @@ export default class TopicDetail extends React.Component<IProps, IStates> {
                 {/* No Footer in detail page */}
             </Fragment>;
         } else {
-            return <Redirect to="/home" />
+            return <Redirect to="/error" />
         }
     }
 }

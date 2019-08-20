@@ -51,7 +51,7 @@ export const topics: Topic [] = [
     },
     {
         id: "swift-ui",
-        title: "Swift& SwiftUI",
+        title: "Swift & SwiftUI",
         schedule: new Date(2019, 8, 29),
         speaker: "Eric Yang",
         speakerAvatar: require("../avatars/eryang.jpg"),

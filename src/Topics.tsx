@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
-import { Title, Body, Content, Text, Header } from "native-base";
+import { Title, Body, Content, Header, List } from "native-base";
+import { RouteComponentProps } from "react-router-native";
+import { topics } from "./data";
+import Topic from "./Topic";
+import TopicItem from "./TopicItem";
 
-interface IProps {};
+interface IProps extends RouteComponentProps<any> {};;
 
 interface IStates {};
 
@@ -10,11 +14,17 @@ export default class Topics extends React.Component<IProps, IStates> {
         return <Fragment>
             <Header noLeft>
                 <Body>
-                    <Title>Topics</Title>
+                    <Title>Topic List</Title>
                 </Body>
             </Header>
-            <Content padder>
-                <Text> TODO: A topic list is to be implemented here.</Text>
+            <Content>
+                <List>
+                    {
+                        topics.map(
+                            (value: Topic) => (<TopicItem value={value} key={value.id} />)
+                        )
+                    }
+                </List>
             </Content>
         </Fragment>;
     }

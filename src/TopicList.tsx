@@ -31,7 +31,7 @@ export default class TopicList extends React.Component<IProps, IStates> {
                 </List>
             </Content>
             {/* only show Footer in list page, do not show Footer in detail page */}
-            <Route exact path={match.path} component={TabNavigator} />
+            <TabNavigator />
         </Fragment>;
     }
 }

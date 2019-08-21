@@ -1,17 +1,18 @@
 import React from "react";
 import Topic from "./Topic.d";
 import { Body, ListItem, Left, Thumbnail, Text, Right } from "native-base";
+import { Link, RouteComponentProps, withRouter } from "react-router-native";
 
-interface IProps {
+interface IProps extends RouteComponentProps<any> {
     value: Topic
 };
 
 interface IStates {};
 
-export default class TopicItem extends React.Component<IProps, IStates> {
+class TopicItem extends React.Component<IProps, IStates> {
     render(): any {
         const topic: Topic = this.props.value;
-        return <ListItem avatar>
+        return <Link to={`${this.props.match.url}/${topic.id}`} component={ListItem} avatar>
             <Left>
                 <Thumbnail small source={topic.speakerAvatar} />
             </Left>
@@ -22,6 +23,8 @@ export default class TopicItem extends React.Component<IProps, IStates> {
             <Right>
                 <Text note>{topic.schedule.toLocaleDateString()}</Text>
             </Right>
-        </ListItem>;
+        </Link>;
     }
 }
+
+export default withRouter(TopicItem);

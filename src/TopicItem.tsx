@@ -13,7 +13,7 @@ class TopicItem extends React.Component<IProps, IStates> {
     render(): any {
         const topic: Topic = this.props.value;
         return <Link to={{
-                pathname: `${this.props.match.path}/${topic.id}`,
+                pathname: `${this.props.match.url}/${topic.id}`,
                 state: topic
             }} component={ListItem} avatar>
             <Left>

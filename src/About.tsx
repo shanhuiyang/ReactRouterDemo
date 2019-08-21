@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
-import { match } from "react-router-native";
+import { RouteComponentProps } from "react-router-native";
 import { Text, Header, Content, Title, Body } from "native-base";
 import TabNavigator from "./TabNavigator";
 
-interface IProps {
-    match: match<any>
-};
+interface IProps extends RouteComponentProps<any> {};
 
 interface IStates {};
 

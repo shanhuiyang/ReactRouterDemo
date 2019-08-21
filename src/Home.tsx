@@ -1,12 +1,9 @@
 import React, { Fragment } from "react";
-import { match } from "react-router-native";
 import { Text, Header, Content, Title, Body } from "native-base";
 import TabNavigator from "./TabNavigator";
 import { Image } from "react-native";
 
-interface IProps {
-    match: match<any>
-};
+interface IProps {};
 
 interface IStates {};
 

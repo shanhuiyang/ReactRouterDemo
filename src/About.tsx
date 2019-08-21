@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { match } from "react-router-native";
 import { Text, Header, Content, Title, Body } from "native-base";
-import TabNavigator from "./TabNavigator";
 
 interface IProps {
     match: match<any>
@@ -20,7 +19,6 @@ export default class About extends React.Component<IProps, IStates> {
             <Content padder>
                 <Text> This is the about page of react router 4.0 demo.</Text>
             </Content>
-            <TabNavigator/>
         </Fragment>;
     }
 }

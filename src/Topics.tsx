@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
 import { Title, Body, Content, Header, List } from "native-base";
-import { RouteComponentProps } from "react-router-native";
 import { topics } from "./data";
 import Topic from "./Topic";
 import TopicItem from "./TopicItem";
 
-interface IProps extends RouteComponentProps<any> {};
+interface IProps {};
 
 interface IStates {};
 

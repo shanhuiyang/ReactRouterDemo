@@ -5,7 +5,7 @@ import { topics } from "./data";
 import Topic from "./Topic";
 import TopicItem from "./TopicItem";
 
-interface IProps extends RouteComponentProps<any> {};;
+interface IProps extends RouteComponentProps<any> {};
 
 interface IStates {};
 

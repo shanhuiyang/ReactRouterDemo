@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { match } from "react-router-native";
 import { Text, Header, Content, Title, Body } from "native-base";
-import TabNavigator from "./TabNavigator";
 import { Image } from "react-native";
 
 interface IProps {
@@ -22,7 +21,6 @@ export default class Home extends React.Component<IProps, IStates> {
                 <Text> This is the home page of react router 4.0 demo.</Text>
                 <Image style={{ alignSelf: "center" }} source={require("../logo.png")}/>
             </Content>
-            <TabNavigator/>
         </Fragment>;
     }
 }

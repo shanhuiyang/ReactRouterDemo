@@ -1,20 +1,21 @@
 import React, { Fragment } from "react";
-import { match, Route } from "react-router-native";
-import TopicDetail from "./TopicDetail";
-import TopicList from "./TopicList";
+import { Title, Body, Content, Text, Header } from "native-base";
 
-interface IProps {
-    match: match<any>
-};
+interface IProps {};
 
 interface IStates {};
 
 export default class Topics extends React.Component<IProps, IStates> {
     render(): any {
-        const match: match<any> = this.props.match;
         return <Fragment>
-            <Route exact path={match.path} component={TopicList} />
-            <Route path={`${match.path}/:topicId`} component={TopicDetail} />
+            <Header noLeft>
+                <Body>
+                    <Title>Topics</Title>
+                </Body>
+            </Header>
+            <Content padder>
+                <Text> TODO: A topic list is to be implemented here.</Text>
+            </Content>
         </Fragment>;
     }
 }
